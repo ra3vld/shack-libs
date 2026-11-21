@@ -1,8 +1,0 @@
-{
-  "name": "shack-rotator-planner",
-  "version": "0.1.0",
-  "build": {
-    "includeDir": "ruckig",
-    "srcDir": "ruckig"
-  }
-}

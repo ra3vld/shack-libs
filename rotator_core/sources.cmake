@@ -1,8 +1,3 @@
-set(SHACK_ROTATOR_SOURCES
-    "${CMAKE_CURRENT_LIST_DIR}/src/calibration.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/input.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/motion.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/protocol.cpp")
 set(SHACK_ROTATOR_PLANNER_SOURCES
     "${CMAKE_CURRENT_LIST_DIR}/ruckig/brake.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/ruckig/position_first_step1.cpp"

@@ -34,9 +34,11 @@ def main():
     parser.add_argument("consumer", type=Path)
     parser.add_argument("components", nargs="+", choices=COMPONENTS)
     parser.add_argument("--revision", default="HEAD")
+    parser.add_argument("--destination", type=Path, default=Path("vendor/shack-libs"),
+                        help="source package directory relative to the consumer")
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    destination = args.consumer / "vendor" / "shack-libs"
+    destination = args.consumer / args.destination
     expected = snapshot(args.revision, args.components)
     current = installed(destination)
     if current == expected:
