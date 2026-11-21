@@ -1,0 +1,17 @@
+set(SHACK_ROTATOR_SOURCES
+    "${CMAKE_CURRENT_LIST_DIR}/src/calibration.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/input.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/motion.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/protocol.cpp")
+set(SHACK_ROTATOR_PLANNER_SOURCES
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/brake.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/position_first_step1.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/position_first_step2.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/position_second_step1.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/position_second_step2.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/position_third_step1.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/position_third_step2.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/velocity_second_step1.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/velocity_second_step2.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/velocity_third_step1.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/ruckig/velocity_third_step2.cpp")

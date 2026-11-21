@@ -1,0 +1,9 @@
+LDG core imported from ra3vld/LDGControl-IDF at
+6ff540f5c846ee5c9a22fb6239fd5e1f32c06a58, also used by Universal Shack Controller.
+Original Remote-LDGControl by Ben Kuhn; LDG protocol reverse engineering by
+Efpophis and contributors. See ldg_core/LICENSE and source notices.
+
+Rotator sources imported from ra3vld/G5500-ESP32S3-Controller at
+77a99487a1897f78a6ebe3900144db282365da0b. Original G5500 Fork by UA1CFM;
+changes by RA3VLD and contributors. See rotator_core/LICENSE.
+Ruckig retains its own MIT license and upstream provenance in rotator_core/ruckig/.
