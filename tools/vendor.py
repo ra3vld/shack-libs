@@ -7,7 +7,7 @@ import subprocess
 import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
-COMPONENTS = ("ldg_core", "rotator_core", "tuner_core")
+COMPONENTS = ("ldg_core", "rotator_core", "tuner_core", "protocol")
 
 
 def git(*args):
