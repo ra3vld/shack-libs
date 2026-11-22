@@ -8,6 +8,7 @@
     "list_devices": "GET /shack/v{major}/devices",
     "get_tuner_state": "GET /shack/v{major}/devices/{device_id}/state"
   },
+  "udp": {"port": 4536},
   "usb": {"prefix": "@SHACK "},
   "mqtt": {
     "request": "shack/v{major}/{node_id}/read/{request_id}/request",
