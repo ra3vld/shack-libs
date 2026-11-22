@@ -2,15 +2,18 @@
 
 [English](README.md)
 
+- `tuner_core` задаёт аппаратно-независимый асинхронный интерфейс тюнера. `ldg::TunerBackend` подключает LDG через действующий контроллер и его журнал операций.
 - `ldg_core` содержит последовательный протокол LDG, контроллер и автоматику. Компонент ESP-IDF и обычная цель CMake имеют одинаковое имя и используют цель `arduinojson` приложения.
 - `rotator_core/src` содержит общий код движения, калибровки, ввода и протоколов логгеров. Исходники компилируются с `control.hpp` и `build_config.hpp` приложения. Контроллер, распиновка и сетевые адаптеры входят в прошивку.
 - `rotator_core/ruckig` содержит планировщик движения. `sources.cmake` перечисляет исходники для CMake. G5500 собирает планировщик из вложенного каталога исходников Arduino.
 
 Приложения собираются из снимка фиксированной ревизии в `vendor/shack-libs`. В USC обновляются оба компонента вместе. В каждой отдельной прошивке выбирается нужный компонент. Снимок воспроизводим и пригоден для офлайн-сборки.
 
+Экспортируйте `tuner_core` вместе с `ldg_core`.
+
 ```sh
-python3 tools/vendor.py /path/to/consumer ldg_core rotator_core --revision COMMIT
-python3 tools/vendor.py /path/to/consumer ldg_core rotator_core --revision COMMIT --check
+python3 tools/vendor.py /path/to/consumer ldg_core tuner_core rotator_core --revision COMMIT
+python3 tools/vendor.py /path/to/consumer ldg_core tuner_core rotator_core --revision COMMIT --check
 python3 tools/vendor.py /path/to/g5500 rotator_core --revision COMMIT --destination G5500_Fork/src/shack-libs
 ```
 

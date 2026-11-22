@@ -42,6 +42,7 @@ struct Request {
     Id id{}, target{};
     uint32_t expires = 0;
     uint8_t command = 0, port = 0;
+    uint8_t sourceAction = 0; // Preserves typed intent when an adapter translates a command.
 };
 enum class OperationState : uint8_t { Empty, Queued, Running, Done };
 struct Operation {
@@ -63,7 +64,8 @@ class Operations {
                 index = i;
                 const auto &old = entries_[i].request;
                 return old.target == r.target && old.expires == r.expires &&
-                               old.command == r.command && old.port == r.port
+                               old.command == r.command && old.port == r.port &&
+                               old.sourceAction == r.sourceAction
                            ? Result::Success
                            : Result::DuplicateConflict;
             }
